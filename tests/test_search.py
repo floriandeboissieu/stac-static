@@ -73,6 +73,7 @@ def test_filter(test_case_1, filter, n):
         ),
         ("../2022-03", None, pd.Timestamp("2022-03-31T23:59:59.999999999", tz="utc")),
         ("2022-03/..", pd.Timestamp("2022-03-01T00:00:00", tz="utc"), None),
+        (["2022-03", None], pd.Timestamp("2022-03-01T00:00:00", tz="utc"), None),
     ],
 )
 def test_datetime_params(value, start, end, planet_disaster):
