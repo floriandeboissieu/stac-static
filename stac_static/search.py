@@ -206,6 +206,8 @@ class ItemSearch:
             return None
         elif isinstance(value, str):
             components = value.split("/")
+        elif isinstance(value, list):
+            components = value # keep None values
         else:
             components = list(value)  # type: ignore
 
